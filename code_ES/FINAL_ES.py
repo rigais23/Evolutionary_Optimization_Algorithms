@@ -19,27 +19,24 @@ import math
 from numpy import asarray, argsort, exp, sqrt, pi, cos
 from numpy.random import rand, randn, seed
 from copy import deepcopy
-import time  # For tracking execution time
-import pandas as pd  # For data aggregation
-import seaborn as sns  # <-- MODIFICATION: Added for better boxplots
-import os  # <-- NEW: Import os for creating directories
-import contextlib  # <-- NEW: Import for redirecting stdout
+import time  
+import pandas as pd  
+import seaborn as sns  
+import os  
+import contextlib 
 
-# --- Imports for L-BFGS-B ---
 import scipy.optimize
 from scipy.stats import qmc
-from numpy.linalg import norm  # For vector distance calculation
+from numpy.linalg import norm  
 
-# --- NEW: Imports for Statistical Testing ---
 from scipy.stats import kruskal, mannwhitneyu
-import scikit_posthocs as sp  # You may need to run: pip install scikit-posthocs
+import scikit_posthocs as sp  
 
 
 ##################
 ## FIT FUNCTION ##
 ##################
 
-# --- MODIFIED: To accept a single vector X for scipy.optimize compatibility ---
 def rastrigin(X, A=10):
     # *X --> point coordinates
     # A --> hardness (how deep)
@@ -47,7 +44,6 @@ def rastrigin(X, A=10):
         [(x ** 2 - A * np.cos(2 * math.pi * x)) for x in X])  # A*len(X) --> ensure the minimum is at [0,0] in 2D.
 
 
-# --- NEW: Gradient (Jacobian) of Rastrigin for L-BFGS-B ---
 def rastrigin_grad(X, A=10):
     X = np.asarray(X)  # Ensure it's a numpy array
     return 2 * X + A * np.sin(2 * math.pi * X) * (2 * math.pi)
@@ -139,7 +135,6 @@ class ES_Algorithm:
 
     # Evaluate fitness function
     def fitness_function(self, individual):
-        # --- MODIFIED: Pass vector 'x' directly, not with * ---
         return self.objective(individual.x)  # * for rastrigin compatibility
 
     # Create initial population with 'lam' individuos
@@ -154,8 +149,6 @@ class ES_Algorithm:
             ind.fitness = self.fitness_function(ind)
         self.fitness_calls += len(self.population)  # Track initial evaluations
 
-        # --- MODIFIED: Quieted this print statement for tuning experiment ---
-        # print(f"Initial population of {self.lam} individuals.")
 
     # Select best 'mu' individuas
     def select(self):
@@ -186,7 +179,6 @@ class ES_Algorithm:
 
         start_time = time.time()  # Start timer
 
-        # --- NEW: Parameters for stagnation check ---
         STAGNATION_WINDOW = 10  # The number of generations to look back
         IMPROVEMENT_THRESHOLD = 1e-6  # The minimum required fitness improvement
 
@@ -221,7 +213,6 @@ class ES_Algorithm:
                 # update the parameters
                 self.best_ind = deepcopy(parents[0])
                 self.best_eval = self.best_ind.fitness
-                # --- MODIFIED: Quieted this print statement for tuning experiment ---
                 # print(f"{epoch}, Best: f({self.best_ind.x}) = {self.best_eval:.5f}")
 
             if self.target_fitness is not None and self.best_eval <= self.target_fitness:
@@ -230,7 +221,6 @@ class ES_Algorithm:
                 self.target_reached = True  # Set success flag
                 break  # Exit the main loop
 
-            # --- NEW: Stagnation Check ---
             # Stop if fitness hasn't improved by at least IMPROVEMENT_THRESHOLD
             # over the last STAGNATION_WINDOW generations.
             if epoch >= STAGNATION_WINDOW:
@@ -247,7 +237,6 @@ class ES_Algorithm:
                     print(f"Current best fitness (epoch {epoch}):     {self.best_eval:.5f}")
                     print(f"Improvement ({improvement:.7f}) is below threshold ({IMPROVEMENT_THRESHOLD})")
                     break  # Exit the main loop
-            # --- End of Stagnation Check ---
 
             # 6.
             children = []
@@ -283,16 +272,11 @@ class ES_Algorithm:
 
         # After loop finishes (normally or by break)
         self.total_time = time.time() - start_time
-        # --- MODIFIED: Ensure generations_run is correct even if loop breaks ---
-        # We add 1 because 'epoch' is 0-indexed and we want a count.
-        # If loop breaks at epoch 10, it has *run* 11 generations (0-10).
         self.generations_run = epoch + 1 if run_completed else 0
 
-        # --- MODIFIED: Return vector and score ---
         return [self.best_ind.x, self.best_eval]
 
 
-# --- NEW: Wrapper for L-BFGS-B Multi-start ---
 def run_lbfgsb_multistart(objective, gradient, bounds, n_starts, target_fitness):
     """
     Runs a multi-start L-BFGS-B optimization.
@@ -337,7 +321,6 @@ def run_lbfgsb_multistart(objective, gradient, bounds, n_starts, target_fitness)
 
     end_time = time.time()
 
-    # --- MODIFIED: Return best_x as well ---
     return {
         "final_fitness": best_score,
         "best_vector": best_x,  # Return the best solution vector
@@ -348,9 +331,9 @@ def run_lbfgsb_multistart(objective, gradient, bounds, n_starts, target_fitness)
     }
 
 
-# -----------------------------------------------------------------
-# --- NEW: EXPERIMENT 1: ES PARAMETER TUNING ---
-# -----------------------------------------------------------------
+# ------------------------------------------
+# ---  EXPERIMENT 1: ES PARAMETER TUNING ---
+# ------------------------------------------
 def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
     """
     Compares different ES configurations.
@@ -382,13 +365,12 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
 
                 best_vector, score = optimizer.run()
 
-                # --- MODIFICATION: Store individual parameters for sorting ---
                 all_results_list.append({
                     'config_name': config_name,
-                    'step_size': step_size,  # <-- NEW
-                    'mu': mu,  # <-- NEW
-                    'lam': lam,  # <-- NEW
-                    'ratio': lam / mu,  # <-- NEW (This is your selective pressure)
+                    'step_size': step_size,  
+                    'mu': mu,  
+                    'lam': lam,  
+                    'ratio': lam / mu,  
                     'run': i,
                     'time': optimizer.total_time,
                     'generations': optimizer.generations_run,
@@ -397,14 +379,12 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
                     'target_reached': optimizer.target_reached,
                     'best_vector': best_vector
                 })
-                # --- End Modification ---
                 print(f"  Run {i + 1}/{n_runs} Complete. Score: {score:.5f}")
 
     print("\n--- Experiment 1 Complete ---")
 
     results_df = pd.DataFrame.from_records(all_results_list)
 
-    # --- Print Statistics ---
     print("\n--- Experiment 1: Summary Statistics ---")
     summary = results_df.groupby('config_name').agg(
         avg_time=('time', 'mean'),
@@ -415,11 +395,11 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
     )
     print(summary.to_markdown(floatfmt=".3f"))
 
-    # --- Find the best configuration ---
+    # Find the best configuration
     best_config_name = summary['avg_fitness'].idxmin()
     print(f"\nBest configuration based on avg_fitness: {best_config_name}")
 
-    # --- NEW: Statistical Analysis (Kruskal-Wallis + Dunn's Post-Hoc) ---
+    # Statistical Analysis (Kruskal-Wallis + Dunn's Post-Hoc) ---)
     print("\n\n--- Experiment 1: Statistical Analysis ---")
     print("Running Kruskal-Wallis H-test for each metric (alpha=0.05)")
     print("If p < 0.05, a post-hoc Dunn's test will be performed.")
@@ -444,24 +424,21 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
             print(dunn_results.to_markdown(floatfmt=".4f"))
         else:
             print("p >= 0.05: No statistically significant difference detected among configurations.")
-    # --- End of Statistical Analysis ---
+    # End of Statistical Analysis 
 
     # --- Plotting ---
     print("\nGenerating and saving plots for Experiment 1...")
 
-    # --- MODIFICATION: Create a custom sort order for the plots ---
     # We sort by ratio (selective pressure) descending, then step_size ascending
     plot_order = results_df.sort_values(
         by=['ratio', 'step_size'],
         ascending=[False, True]
     )['config_name'].unique()
-    # --- End Modification ---
 
     fig, axes = plt.subplots(2, 2, figsize=(18, 12))
     fig.suptitle('Experiment 1: ES Parameter Tuning Results', fontsize=16, y=1.03)
 
     # Plot 1: Final Fitness
-    # --- MODIFICATION: Added order=plot_order ---
     sns.boxplot(data=results_df, x='config_name', y='final_fitness', ax=axes[0, 0], order=plot_order)
     axes[0, 0].set_title('Final Fitness (Lower is Better)')
     axes[0, 0].set_yscale('log')
@@ -469,14 +446,12 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
     axes[0, 0].tick_params(axis='x', rotation=30)
 
     # Plot 2: Execution Time
-    # --- MODIFICATION: Added order=plot_order ---
     sns.boxplot(data=results_df, x='config_name', y='time', ax=axes[0, 1], order=plot_order)
     axes[0, 1].set_title('Execution Time')
     axes[0, 1].set_xlabel(None)
     axes[0, 1].tick_params(axis='x', rotation=30)
 
     # Plot 3: Fitness Calls
-    # --- MODIFICATION: Added order=plot_order ---
     sns.boxplot(data=results_df, x='config_name', y='fitness_calls', ax=axes[1, 0], order=plot_order)
     axes[1, 0].set_title('Fitness Function Calls')
     axes[1, 0].set_xlabel(None)
@@ -484,7 +459,6 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
 
     # Plot 4: Success Rate (Bar plot is better for this)
     success_df = summary['success_rate'].reset_index()
-    # --- MODIFICATION: Added order=plot_order ---
     sns.barplot(data=success_df, x='config_name', y='success_rate', ax=axes[1, 1], palette='viridis', order=plot_order)
     axes[1, 1].set_title('Success Rate (Target Reached)')
     axes[1, 1].set_xlabel(None)
@@ -493,16 +467,15 @@ def run_experiment_1_es_tuning(n_runs, n_iter, target_fitness, base_bounds):
 
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 
-    # --- MODIFIED: Save the figure ---
     fig.savefig('./experiment1/tuning_summary_boxplots.png', bbox_inches='tight')
     plt.show()
 
     return best_config_name
 
 
-# -----------------------------------------------------------------
-# --- NEW: EXPERIMENT 2: ALGORITHM COMPARISON ---
-# -----------------------------------------------------------------
+# ------------------------------------------
+# --- EXPERIMENT 2: ALGORITHM COMPARISON ---
+# ------------------------------------------
 def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, base_bounds):
     """
     Compares the best ES config vs. L-BFGS-B.
@@ -573,11 +546,9 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
 
     results_df = pd.DataFrame.from_records(all_results_list)
 
-    # --- NEW: Calculate Solution Distance metric ---
     # This is the L2 norm (Euclidean distance) from the vector to the origin [0, 0, ...]
     results_df['solution_distance'] = results_df['best_vector'].apply(norm)
 
-    # --- Run the analysis from your previous code ---
 
     # 1. Average Execution Time
     print("\n1. Average Execution Time:")
@@ -615,7 +586,6 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
 
     print("------------------------------------------")
 
-    # --- Print Other Statistics ---
     print(f"\n--- Other Statistics (For Context) ---")
     summary_stats = results_df.groupby('algorithm').agg(
         avg_final_fitness=('final_fitness', 'mean'),
@@ -628,7 +598,7 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
     print(summary_stats.to_markdown(floatfmt=".4f"))
     print("------------------------------------------")
 
-    # --- NEW: Statistical Analysis (Mann-Whitney U Test) ---
+    # Statistical Analysis (Mann-Whitney U Test) ---
     print("\n\n--- Experiment 2: Statistical Analysis ---")
     print("Running Mann-Whitney U test for each metric (alpha=0.05)")
     print("This tests if the two groups (ES vs. L-BFGS-B) are from different distributions.")
@@ -654,9 +624,7 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
                 print("p >= 0.05: No statistically significant difference detected.")
         except ValueError as e:
             print(f"Could not run test for {metric_name}. All values might be identical. Error: {e}")
-    # --- End of Statistical Analysis ---
 
-    # --- Plotting ---
     print("\nGenerating and saving plots for Experiment 2...")
 
     # Plot 1: Summary Boxplots (Comparison)
@@ -678,7 +646,6 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
     fig_summary.suptitle(f'Experiment 2: Algorithm Comparison Over {n_runs} Runs', fontsize=16, y=1.03)
     plt.tight_layout()
 
-    # --- MODIFIED: Save the figure ---
     fig_summary.savefig('./experiment2/comparison_summary_boxplots.png', bbox_inches='tight')
     plt.show()
 
@@ -717,14 +684,13 @@ def run_experiment_2_comparison(best_es_config, n_runs, n_iter, target_fitness, 
 
         plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 
-        # --- MODIFIED: Save the figure ---
         fig_es.savefig('./experiment2/comparison_es_convergence.png', bbox_inches='tight')
         plt.show()
 
 
-# -----------------------------------------------------------------
-# --- NEW: EXPERIMENT 3: SCALABILITY ANALYSIS ---
-# -----------------------------------------------------------------
+# ----------------------------------
+# EXPERIMENT 3: SCALABILITY ANALYSIS 
+# ----------------------------------
 def run_experiment_3_scalability(best_es_config, n_runs, n_iter, target_fitness):
     """
     Compares the best ES config on problems of increasing dimensionality.
@@ -786,7 +752,7 @@ def run_experiment_3_scalability(best_es_config, n_runs, n_iter, target_fitness)
     )
     print(summary.to_markdown(floatfmt=".3f"))
 
-    # --- NEW: Statistical Analysis (Kruskal-Wallis + Dunn's Post-Hoc) ---
+    # Statistical Analysis (Kruskal-Wallis + Dunn's Post-Hoc) ---
     print("\n\n--- Experiment 3: Statistical Analysis ---")
     print("Running Kruskal-Wallis H-test for each metric (alpha=0.05)")
     print("If p < 0.05, a post-hoc Dunn's test will be performed.")
@@ -810,7 +776,6 @@ def run_experiment_3_scalability(best_es_config, n_runs, n_iter, target_fitness)
             print(dunn_results.to_markdown(floatfmt=".4f"))
         else:
             print("p >= 0.05: No statistically significant difference detected among dimensions.")
-    # --- End of Statistical Analysis ---
 
     # --- Plotting ---
     print("\nGenerating and saving plots for Experiment 3...")
@@ -848,14 +813,13 @@ def run_experiment_3_scalability(best_es_config, n_runs, n_iter, target_fitness)
 
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 
-    # --- MODIFIED: Save the figure ---
     fig.savefig('./experiment3/scalability_summary_boxplots.png', bbox_inches='tight')
     plt.show()
 
 
-# -----------------------------------------------------------------
-# --- NEW: MAIN EXECUTION (CONTROLLER) ---
-# -----------------------------------------------------------------
+# -----------------------------------
+# --- MAIN EXECUTION (CONTROLLER) ---
+# -----------------------------------
 
 if __name__ == '__main__':
     # seed the pseudorandom number generator
@@ -868,11 +832,9 @@ if __name__ == '__main__':
     EXPERIMENT_TO_RUN = 3
     # --------------------------------------
 
-    # --- NEW: Create output directories ---
     os.makedirs("./experiment1", exist_ok=True)
     os.makedirs("./experiment2", exist_ok=True)
     os.makedirs("./experiment3", exist_ok=True)
-    # --------------------------------------
 
     # --- Global Experiment Parameters ---
 
@@ -899,7 +861,7 @@ if __name__ == '__main__':
         'lam': 1000  # the number of children generated by parents
     }
 
-    # --- MODIFIED: Run the selected experiment with logging ---
+    # Run the selected experiment with logging ---
     if EXPERIMENT_TO_RUN == 1:
         log_path = './experiment1/experiment1_log.txt'
         print(f"--- Running Experiment 1. All output will be logged to {log_path} ---")
