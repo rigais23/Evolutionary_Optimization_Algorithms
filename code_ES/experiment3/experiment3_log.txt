@@ -1,0 +1,608 @@
+--- NOTE: Running Exp 3 with *manually set* best_es_config_params ---
+--- Starting Experiment 3: ES Scalability Analysis (30 runs per dimension) ---
+Using ES Config: {'step_size': 0.1, 'mu': 50, 'lam': 1000}
+
+--- Testing Dimension: 2 ---
+  Run 1/30 Complete. Score: 0.00458
+  Run 2/30 Complete. Score: 0.00844
+  Run 3/30 Complete. Score: 0.00817
+  Run 4/30 Complete. Score: 0.00104
+  Run 5/30 Complete. Score: 0.00285
+  Run 6/30 Complete. Score: 0.00263
+  Run 7/30 Complete. Score: 0.00413
+  Run 8/30 Complete. Score: 0.00114
+  Run 9/30 Complete. Score: 0.00130
+  Run 10/30 Complete. Score: 0.00451
+  Run 11/30 Complete. Score: 0.00681
+  Run 12/30 Complete. Score: 0.00081
+  Run 13/30 Complete. Score: 0.00270
+  Run 14/30 Complete. Score: 0.00575
+  Run 15/30 Complete. Score: 0.00003
+  Run 16/30 Complete. Score: 0.00596
+  Run 17/30 Complete. Score: 0.00126
+  Run 18/30 Complete. Score: 0.00102
+  Run 19/30 Complete. Score: 0.00425
+  Run 20/30 Complete. Score: 0.00751
+  Run 21/30 Complete. Score: 0.00055
+  Run 22/30 Complete. Score: 0.00626
+  Run 23/30 Complete. Score: 0.00284
+  Run 24/30 Complete. Score: 0.00756
+  Run 25/30 Complete. Score: 0.00993
+  Run 26/30 Complete. Score: 0.00168
+  Run 27/30 Complete. Score: 0.00954
+  Run 28/30 Complete. Score: 0.00010
+  Run 29/30 Complete. Score: 0.00093
+  Run 30/30 Complete. Score: 0.00098
+
+--- Testing Dimension: 4 ---
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 1/30 Complete. Score: 0.99496
+  Run 2/30 Complete. Score: 0.00861
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000002) is below threshold (1e-06)
+  Run 3/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 37! ---
+Best fitness 10 gens ago (epoch 27): 1.98992
+Current best fitness (epoch 37):     1.98992
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 4/30 Complete. Score: 1.98992
+  Run 5/30 Complete. Score: 0.00924
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 6/30 Complete. Score: 0.99496
+  Run 7/30 Complete. Score: 0.00745
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 8/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 9/30 Complete. Score: 0.99496
+  Run 10/30 Complete. Score: 0.00801
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 11/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 12/30 Complete. Score: 0.99496
+  Run 13/30 Complete. Score: 0.00683
+
+--- Stagnation detected at epoch 35! ---
+Best fitness 10 gens ago (epoch 25): 0.99496
+Current best fitness (epoch 35):     0.99496
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 14/30 Complete. Score: 0.99496
+  Run 15/30 Complete. Score: 0.00557
+
+--- Stagnation detected at epoch 36! ---
+Best fitness 10 gens ago (epoch 26): 0.99496
+Current best fitness (epoch 36):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 16/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000001) is below threshold (1e-06)
+  Run 17/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 17! ---
+Best fitness 10 gens ago (epoch 7): 1.64362
+Current best fitness (epoch 17):     1.64362
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 18/30 Complete. Score: 1.64362
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 19/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 20/30 Complete. Score: 0.99496
+  Run 21/30 Complete. Score: 0.00171
+  Run 22/30 Complete. Score: 0.00749
+
+--- Stagnation detected at epoch 37! ---
+Best fitness 10 gens ago (epoch 27): 0.99496
+Current best fitness (epoch 37):     0.99496
+Improvement (0.0000005) is below threshold (1e-06)
+  Run 23/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 24/30 Complete. Score: 0.99496
+  Run 25/30 Complete. Score: 0.00814
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 26/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 42! ---
+Best fitness 10 gens ago (epoch 32): 0.99496
+Current best fitness (epoch 42):     0.99496
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 27/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 28/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 29/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 30/30 Complete. Score: 0.99496
+
+--- Testing Dimension: 8 ---
+
+--- Stagnation detected at epoch 87! ---
+Best fitness 10 gens ago (epoch 77): 6.96471
+Current best fitness (epoch 87):     6.96471
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 1/30 Complete. Score: 6.96471
+
+--- Stagnation detected at epoch 95! ---
+Best fitness 10 gens ago (epoch 85): 3.97984
+Current best fitness (epoch 95):     3.97984
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 2/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 90! ---
+Best fitness 10 gens ago (epoch 80): 3.97984
+Current best fitness (epoch 90):     3.97984
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 3/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 81! ---
+Best fitness 10 gens ago (epoch 71): 4.97480
+Current best fitness (epoch 81):     4.97480
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 4/30 Complete. Score: 4.97480
+
+--- Stagnation detected at epoch 83! ---
+Best fitness 10 gens ago (epoch 73): 2.98488
+Current best fitness (epoch 83):     2.98488
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 5/30 Complete. Score: 2.98488
+
+--- Stagnation detected at epoch 92! ---
+Best fitness 10 gens ago (epoch 82): 3.97984
+Current best fitness (epoch 92):     3.97984
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 6/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 83! ---
+Best fitness 10 gens ago (epoch 73): 3.97984
+Current best fitness (epoch 83):     3.97984
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 7/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 92! ---
+Best fitness 10 gens ago (epoch 82): 3.97984
+Current best fitness (epoch 92):     3.97984
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 8/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 84! ---
+Best fitness 10 gens ago (epoch 74): 3.97984
+Current best fitness (epoch 84):     3.97984
+Improvement (0.0000005) is below threshold (1e-06)
+  Run 9/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 84! ---
+Best fitness 10 gens ago (epoch 74): 6.96471
+Current best fitness (epoch 84):     6.96471
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 10/30 Complete. Score: 6.96471
+
+--- Stagnation detected at epoch 86! ---
+Best fitness 10 gens ago (epoch 76): 3.97984
+Current best fitness (epoch 86):     3.97984
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 11/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 85! ---
+Best fitness 10 gens ago (epoch 75): 1.98992
+Current best fitness (epoch 85):     1.98992
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 12/30 Complete. Score: 1.98992
+
+--- Stagnation detected at epoch 85! ---
+Best fitness 10 gens ago (epoch 75): 3.97984
+Current best fitness (epoch 85):     3.97984
+Improvement (0.0000005) is below threshold (1e-06)
+  Run 13/30 Complete. Score: 3.97984
+
+--- Stagnation detected at epoch 81! ---
+Best fitness 10 gens ago (epoch 71): 2.98488
+Current best fitness (epoch 81):     2.98488
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 14/30 Complete. Score: 2.98488
+
+--- Stagnation detected at epoch 77! ---
+Best fitness 10 gens ago (epoch 67): 6.96471
+Current best fitness (epoch 77):     6.96471
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 15/30 Complete. Score: 6.96471
+
+--- Stagnation detected at epoch 87! ---
+Best fitness 10 gens ago (epoch 77): 1.98992
+Current best fitness (epoch 87):     1.98992
+Improvement (0.0000004) is below threshold (1e-06)
+  Run 16/30 Complete. Score: 1.98992
+
+--- Stagnation detected at epoch 84! ---
+Best fitness 10 gens ago (epoch 74): 2.98488
+Current best fitness (epoch 84):     2.98488
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 17/30 Complete. Score: 2.98488
+
+--- Stagnation detected at epoch 89! ---
+Best fitness 10 gens ago (epoch 79): 4.97480
+Current best fitness (epoch 89):     4.97480
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 18/30 Complete. Score: 4.97480
+
+--- Stagnation detected at epoch 82! ---
+Best fitness 10 gens ago (epoch 72): 5.96976
+Current best fitness (epoch 82):     5.96975
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 19/30 Complete. Score: 5.96975
+
+--- Stagnation detected at epoch 83! ---
+Best fitness 10 gens ago (epoch 73): 0.99496
+Current best fitness (epoch 83):     0.99496
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 20/30 Complete. Score: 0.99496
+
+--- Stagnation detected at epoch 87! ---
+Best fitness 10 gens ago (epoch 77): 4.97479
+Current best fitness (epoch 87):     4.97479
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 21/30 Complete. Score: 4.97479
+
+--- Stagnation detected at epoch 31! ---
+Best fitness 10 gens ago (epoch 21): 2.01107
+Current best fitness (epoch 31):     2.01107
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 22/30 Complete. Score: 2.01107
+
+--- Stagnation detected at epoch 86! ---
+Best fitness 10 gens ago (epoch 76): 7.95967
+Current best fitness (epoch 86):     7.95967
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 23/30 Complete. Score: 7.95967
+
+--- Stagnation detected at epoch 85! ---
+Best fitness 10 gens ago (epoch 75): 5.96976
+Current best fitness (epoch 85):     5.96975
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 24/30 Complete. Score: 5.96975
+
+--- Stagnation detected at epoch 83! ---
+Best fitness 10 gens ago (epoch 73): 2.98488
+Current best fitness (epoch 83):     2.98488
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 25/30 Complete. Score: 2.98488
+
+--- Stagnation detected at epoch 22! ---
+Best fitness 10 gens ago (epoch 12): 5.64711
+Current best fitness (epoch 22):     5.64711
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 26/30 Complete. Score: 5.64711
+
+--- Stagnation detected at epoch 89! ---
+Best fitness 10 gens ago (epoch 79): 7.95967
+Current best fitness (epoch 89):     7.95967
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 27/30 Complete. Score: 7.95967
+
+--- Stagnation detected at epoch 86! ---
+Best fitness 10 gens ago (epoch 76): 4.97480
+Current best fitness (epoch 86):     4.97480
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 28/30 Complete. Score: 4.97480
+
+--- Stagnation detected at epoch 83! ---
+Best fitness 10 gens ago (epoch 73): 6.96471
+Current best fitness (epoch 83):     6.96471
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 29/30 Complete. Score: 6.96471
+
+--- Stagnation detected at epoch 22! ---
+Best fitness 10 gens ago (epoch 12): 6.00899
+Current best fitness (epoch 22):     6.00899
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 30/30 Complete. Score: 6.00899
+
+--- Testing Dimension: 16 ---
+
+--- Stagnation detected at epoch 218! ---
+Best fitness 10 gens ago (epoch 208): 15.91934
+Current best fitness (epoch 218):     15.91934
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 1/30 Complete. Score: 15.91934
+
+--- Stagnation detected at epoch 200! ---
+Best fitness 10 gens ago (epoch 190): 13.92942
+Current best fitness (epoch 200):     13.92942
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 2/30 Complete. Score: 13.92942
+
+--- Stagnation detected at epoch 213! ---
+Best fitness 10 gens ago (epoch 203): 16.91429
+Current best fitness (epoch 213):     16.91429
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 3/30 Complete. Score: 16.91429
+
+--- Stagnation detected at epoch 208! ---
+Best fitness 10 gens ago (epoch 198): 17.90925
+Current best fitness (epoch 208):     17.90925
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 4/30 Complete. Score: 17.90925
+
+--- Stagnation detected at epoch 207! ---
+Best fitness 10 gens ago (epoch 197): 13.92942
+Current best fitness (epoch 207):     13.92942
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 5/30 Complete. Score: 13.92942
+
+--- Stagnation detected at epoch 85! ---
+Best fitness 10 gens ago (epoch 75): 19.94912
+Current best fitness (epoch 85):     19.94912
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 6/30 Complete. Score: 19.94912
+
+--- Stagnation detected at epoch 214! ---
+Best fitness 10 gens ago (epoch 204): 11.93950
+Current best fitness (epoch 214):     11.93950
+Improvement (0.0000002) is below threshold (1e-06)
+  Run 7/30 Complete. Score: 11.93950
+
+--- Stagnation detected at epoch 204! ---
+Best fitness 10 gens ago (epoch 194): 11.93951
+Current best fitness (epoch 204):     11.93950
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 8/30 Complete. Score: 11.93950
+
+--- Stagnation detected at epoch 210! ---
+Best fitness 10 gens ago (epoch 200): 15.91934
+Current best fitness (epoch 210):     15.91934
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 9/30 Complete. Score: 15.91934
+
+--- Stagnation detected at epoch 216! ---
+Best fitness 10 gens ago (epoch 206): 14.92438
+Current best fitness (epoch 216):     14.92438
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 10/30 Complete. Score: 14.92438
+
+--- Stagnation detected at epoch 143! ---
+Best fitness 10 gens ago (epoch 133): 20.89464
+Current best fitness (epoch 143):     20.89464
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 11/30 Complete. Score: 20.89464
+
+--- Stagnation detected at epoch 218! ---
+Best fitness 10 gens ago (epoch 208): 14.92438
+Current best fitness (epoch 218):     14.92438
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 12/30 Complete. Score: 14.92438
+
+--- Stagnation detected at epoch 212! ---
+Best fitness 10 gens ago (epoch 202): 17.90925
+Current best fitness (epoch 212):     17.90925
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 13/30 Complete. Score: 17.90925
+
+--- Stagnation detected at epoch 229! ---
+Best fitness 10 gens ago (epoch 219): 11.93951
+Current best fitness (epoch 229):     11.93951
+Improvement (0.0000005) is below threshold (1e-06)
+  Run 14/30 Complete. Score: 11.93951
+
+--- Stagnation detected at epoch 200! ---
+Best fitness 10 gens ago (epoch 190): 10.94455
+Current best fitness (epoch 200):     10.94455
+Improvement (0.0000010) is below threshold (1e-06)
+  Run 15/30 Complete. Score: 10.94455
+
+--- Stagnation detected at epoch 216! ---
+Best fitness 10 gens ago (epoch 206): 17.90925
+Current best fitness (epoch 216):     17.90925
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 16/30 Complete. Score: 17.90925
+
+--- Stagnation detected at epoch 132! ---
+Best fitness 10 gens ago (epoch 122): 9.94990
+Current best fitness (epoch 132):     9.94990
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 17/30 Complete. Score: 9.94990
+
+--- Stagnation detected at epoch 144! ---
+Best fitness 10 gens ago (epoch 134): 14.92462
+Current best fitness (epoch 144):     14.92462
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 18/30 Complete. Score: 14.92462
+
+--- Stagnation detected at epoch 212! ---
+Best fitness 10 gens ago (epoch 202): 18.90421
+Current best fitness (epoch 212):     18.90421
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 19/30 Complete. Score: 18.90421
+
+--- Stagnation detected at epoch 220! ---
+Best fitness 10 gens ago (epoch 210): 14.92438
+Current best fitness (epoch 220):     14.92438
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 20/30 Complete. Score: 14.92438
+
+--- Stagnation detected at epoch 212! ---
+Best fitness 10 gens ago (epoch 202): 12.93446
+Current best fitness (epoch 212):     12.93446
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 21/30 Complete. Score: 12.93446
+
+--- Stagnation detected at epoch 210! ---
+Best fitness 10 gens ago (epoch 200): 26.86387
+Current best fitness (epoch 210):     26.86387
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 22/30 Complete. Score: 26.86387
+
+--- Stagnation detected at epoch 211! ---
+Best fitness 10 gens ago (epoch 201): 11.93951
+Current best fitness (epoch 211):     11.93950
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 23/30 Complete. Score: 11.93950
+
+--- Stagnation detected at epoch 203! ---
+Best fitness 10 gens ago (epoch 193): 14.92438
+Current best fitness (epoch 203):     14.92438
+Improvement (0.0000007) is below threshold (1e-06)
+  Run 24/30 Complete. Score: 14.92438
+
+--- Stagnation detected at epoch 124! ---
+Best fitness 10 gens ago (epoch 114): 12.93830
+Current best fitness (epoch 124):     12.93830
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 25/30 Complete. Score: 12.93830
+
+--- Stagnation detected at epoch 35! ---
+Best fitness 10 gens ago (epoch 25): 12.02846
+Current best fitness (epoch 35):     12.02846
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 26/30 Complete. Score: 12.02846
+
+--- Stagnation detected at epoch 216! ---
+Best fitness 10 gens ago (epoch 206): 16.91430
+Current best fitness (epoch 216):     16.91429
+Improvement (0.0000006) is below threshold (1e-06)
+  Run 27/30 Complete. Score: 16.91429
+
+--- Stagnation detected at epoch 205! ---
+Best fitness 10 gens ago (epoch 195): 14.92438
+Current best fitness (epoch 205):     14.92438
+Improvement (0.0000008) is below threshold (1e-06)
+  Run 28/30 Complete. Score: 14.92438
+
+--- Stagnation detected at epoch 208! ---
+Best fitness 10 gens ago (epoch 198): 15.91934
+Current best fitness (epoch 208):     15.91934
+Improvement (0.0000009) is below threshold (1e-06)
+  Run 29/30 Complete. Score: 15.91934
+
+--- Stagnation detected at epoch 79! ---
+Best fitness 10 gens ago (epoch 69): 10.97501
+Current best fitness (epoch 79):     10.97501
+Improvement (0.0000000) is below threshold (1e-06)
+  Run 30/30 Complete. Score: 10.97501
+
+--- Experiment 3 Complete ---
+
+--- Experiment 3: Summary Statistics ---
+|   dimensions |   avg_time |   avg_fitness |   avg_calls |   avg_gens |   success_rate |
+|-------------:|-----------:|--------------:|------------:|-----------:|---------------:|
+|            2 |      0.025 |         0.004 |    3100.000 |      3.100 |          1.000 |
+|            4 |      0.328 |         0.753 |   30700.000 |     30.700 |          0.300 |
+|            8 |      1.015 |         4.601 |   80466.667 |     80.467 |          0.000 |
+|           16 |      3.023 |        15.229 |  187800.000 |    187.800 |          0.000 |
+
+
+--- Experiment 3: Statistical Analysis ---
+Running Kruskal-Wallis H-test for each metric (alpha=0.05)
+If p < 0.05, a post-hoc Dunn's test will be performed.
+
+--- Statistical Test for: final_fitness ---
+Kruskal-Wallis Test: H-statistic = 108.7742, p-value = 0.0000
+p < 0.05: Significant difference detected. Running Dunn's post-hoc test...
+Dunn's Post-Hoc Test (p-values, Holm correction):
+|    |      2 |      4 |      8 |     16 |
+|---:|-------:|-------:|-------:|-------:|
+|  2 | 1.0000 | 0.0035 | 0.0000 | 0.0000 |
+|  4 | 0.0035 | 1.0000 | 0.0012 | 0.0000 |
+|  8 | 0.0000 | 0.0012 | 1.0000 | 0.0016 |
+| 16 | 0.0000 | 0.0000 | 0.0016 | 1.0000 |
+
+--- Statistical Test for: time ---
+Kruskal-Wallis Test: H-statistic = 107.5393, p-value = 0.0000
+p < 0.05: Significant difference detected. Running Dunn's post-hoc test...
+Dunn's Post-Hoc Test (p-values, Holm correction):
+|    |      2 |      4 |      8 |     16 |
+|---:|-------:|-------:|-------:|-------:|
+|  2 | 1.0000 | 0.0011 | 0.0000 | 0.0000 |
+|  4 | 0.0011 | 1.0000 | 0.0026 | 0.0000 |
+|  8 | 0.0000 | 0.0026 | 1.0000 | 0.0016 |
+| 16 | 0.0000 | 0.0000 | 0.0016 | 1.0000 |
+
+--- Statistical Test for: fitness_calls ---
+Kruskal-Wallis Test: H-statistic = 104.1550, p-value = 0.0000
+p < 0.05: Significant difference detected. Running Dunn's post-hoc test...
+Dunn's Post-Hoc Test (p-values, Holm correction):
+|    |      2 |      4 |      8 |     16 |
+|---:|-------:|-------:|-------:|-------:|
+|  2 | 1.0000 | 0.0008 | 0.0000 | 0.0000 |
+|  4 | 0.0008 | 1.0000 | 0.0042 | 0.0000 |
+|  8 | 0.0000 | 0.0042 | 1.0000 | 0.0042 |
+| 16 | 0.0000 | 0.0000 | 0.0042 | 1.0000 |
+
+--- Statistical Test for: generations ---
+Kruskal-Wallis Test: H-statistic = 104.1550, p-value = 0.0000
+p < 0.05: Significant difference detected. Running Dunn's post-hoc test...
+Dunn's Post-Hoc Test (p-values, Holm correction):
+|    |      2 |      4 |      8 |     16 |
+|---:|-------:|-------:|-------:|-------:|
+|  2 | 1.0000 | 0.0008 | 0.0000 | 0.0000 |
+|  4 | 0.0008 | 1.0000 | 0.0042 | 0.0000 |
+|  8 | 0.0000 | 0.0042 | 1.0000 | 0.0042 |
+| 16 | 0.0000 | 0.0000 | 0.0042 | 1.0000 |
+
+--- Statistical Test for: target_reached ---
+Kruskal-Wallis Test: H-statistic = 90.5214, p-value = 0.0000
+p < 0.05: Significant difference detected. Running Dunn's post-hoc test...
+Dunn's Post-Hoc Test (p-values, Holm correction):
+|    |      2 |      4 |      8 |     16 |
+|---:|-------:|-------:|-------:|-------:|
+|  2 | 1.0000 | 0.0000 | 0.0000 | 0.0000 |
+|  4 | 0.0000 | 1.0000 | 0.0405 | 0.0405 |
+|  8 | 0.0000 | 0.0405 | 1.0000 | 1.0000 |
+| 16 | 0.0000 | 0.0405 | 1.0000 | 1.0000 |
+
+Generating and saving plots for Experiment 3...

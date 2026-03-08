@@ -1,0 +1,229 @@
+--- NOTE: Running Exp 2 with *manually set* best_es_config_params ---
+--- Starting Experiment 2: ES vs L-BFGS-B (30 runs) ---
+Best ES Config: {'step_size': 0.1, 'mu': 50, 'lam': 1000}
+
+--- Running ES Algorithm ---
+  Starting ES Run 1/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 1.98992
+Current best fitness (epoch 39):     1.98992
+Improvement (0.0000007) is below threshold (1e-06)
+  Starting ES Run 2/30...
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000003) is below threshold (1e-06)
+  Starting ES Run 3/30...
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000008) is below threshold (1e-06)
+  Starting ES Run 4/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000002) is below threshold (1e-06)
+  Starting ES Run 5/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 1.98992
+Current best fitness (epoch 39):     1.98992
+Improvement (0.0000010) is below threshold (1e-06)
+  Starting ES Run 6/30...
+
+--- Stagnation detected at epoch 42! ---
+Best fitness 10 gens ago (epoch 32): 0.99496
+Current best fitness (epoch 42):     0.99496
+Improvement (0.0000005) is below threshold (1e-06)
+  Starting ES Run 7/30...
+  Starting ES Run 8/30...
+
+--- Stagnation detected at epoch 42! ---
+Best fitness 10 gens ago (epoch 32): 0.99496
+Current best fitness (epoch 42):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Starting ES Run 9/30...
+  Starting ES Run 10/30...
+  Starting ES Run 11/30...
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 1.98992
+Current best fitness (epoch 38):     1.98992
+Improvement (0.0000007) is below threshold (1e-06)
+  Starting ES Run 12/30...
+
+--- Stagnation detected at epoch 35! ---
+Best fitness 10 gens ago (epoch 25): 0.99496
+Current best fitness (epoch 35):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Starting ES Run 13/30...
+
+--- Stagnation detected at epoch 37! ---
+Best fitness 10 gens ago (epoch 27): 0.99496
+Current best fitness (epoch 37):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Starting ES Run 14/30...
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000010) is below threshold (1e-06)
+  Starting ES Run 15/30...
+  Starting ES Run 16/30...
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000010) is below threshold (1e-06)
+  Starting ES Run 17/30...
+  Starting ES Run 18/30...
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000007) is below threshold (1e-06)
+  Starting ES Run 19/30...
+
+--- Stagnation detected at epoch 41! ---
+Best fitness 10 gens ago (epoch 31): 0.99496
+Current best fitness (epoch 41):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Starting ES Run 20/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000006) is below threshold (1e-06)
+  Starting ES Run 21/30...
+
+--- Stagnation detected at epoch 35! ---
+Best fitness 10 gens ago (epoch 25): 0.99496
+Current best fitness (epoch 35):     0.99496
+Improvement (0.0000005) is below threshold (1e-06)
+  Starting ES Run 22/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+  Starting ES Run 23/30...
+
+--- Stagnation detected at epoch 38! ---
+Best fitness 10 gens ago (epoch 28): 0.99496
+Current best fitness (epoch 38):     0.99496
+Improvement (0.0000002) is below threshold (1e-06)
+  Starting ES Run 24/30...
+  Starting ES Run 25/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000003) is below threshold (1e-06)
+  Starting ES Run 26/30...
+
+--- Stagnation detected at epoch 39! ---
+Best fitness 10 gens ago (epoch 29): 0.99496
+Current best fitness (epoch 39):     0.99496
+Improvement (0.0000002) is below threshold (1e-06)
+  Starting ES Run 27/30...
+  Starting ES Run 28/30...
+
+--- Stagnation detected at epoch 37! ---
+Best fitness 10 gens ago (epoch 27): 0.99496
+Current best fitness (epoch 37):     0.99496
+Improvement (0.0000002) is below threshold (1e-06)
+  Starting ES Run 29/30...
+
+--- Stagnation detected at epoch 37! ---
+Best fitness 10 gens ago (epoch 27): 0.99496
+Current best fitness (epoch 37):     0.99496
+Improvement (0.0000008) is below threshold (1e-06)
+  Starting ES Run 30/30...
+
+--- Stagnation detected at epoch 40! ---
+Best fitness 10 gens ago (epoch 30): 0.99496
+Current best fitness (epoch 40):     0.99496
+Improvement (0.0000004) is below threshold (1e-06)
+
+--- Running L-BFGS-B Algorithm ---
+  Starting L-BFGS-B Run 1/30...
+  Starting L-BFGS-B Run 2/30...
+  Starting L-BFGS-B Run 3/30...
+  Starting L-BFGS-B Run 4/30...
+  Starting L-BFGS-B Run 5/30...
+  Starting L-BFGS-B Run 6/30...
+  Starting L-BFGS-B Run 7/30...
+  Starting L-BFGS-B Run 8/30...
+  Starting L-BFGS-B Run 9/30...
+  Starting L-BFGS-B Run 10/30...
+  Starting L-BFGS-B Run 11/30...
+  Starting L-BFGS-B Run 12/30...
+  Starting L-BFGS-B Run 13/30...
+  Starting L-BFGS-B Run 14/30...
+  Starting L-BFGS-B Run 15/30...
+  Starting L-BFGS-B Run 16/30...
+  Starting L-BFGS-B Run 17/30...
+  Starting L-BFGS-B Run 18/30...
+  Starting L-BFGS-B Run 19/30...
+  Starting L-BFGS-B Run 20/30...
+  Starting L-BFGS-B Run 21/30...
+  Starting L-BFGS-B Run 22/30...
+  Starting L-BFGS-B Run 23/30...
+  Starting L-BFGS-B Run 24/30...
+  Starting L-BFGS-B Run 25/30...
+  Starting L-BFGS-B Run 26/30...
+  Starting L-BFGS-B Run 27/30...
+  Starting L-BFGS-B Run 28/30...
+  Starting L-BFGS-B Run 29/30...
+  Starting L-BFGS-B Run 30/30...
+
+--- Experiment 2 Complete ---
+
+1. Average Execution Time:
+| algorithm        |   mean |    std |
+|:-----------------|-------:|-------:|
+| ES (Best Config) | 0.3515 | 0.1409 |
+| L-BFGS-B (Multi) | 0.1723 | 0.0164 |
+
+2. Average Solution Vector (Bias & Variance):
+
+Algorithm: ES (Best Config)
+  - Mean Solution Vector: [-0.03301171  0.0662475  -0.0331454   0.13266229]
+  - Bias (Distance of Mean Vector from Origin): 0.155488
+  - Spread (Avg. distance of solutions from their mean): 0.823049
+
+Algorithm: L-BFGS-B (Multi)
+  - Mean Solution Vector: [-7.16747282e-10  1.95574037e-09 -1.33125535e-09  3.37467427e-09]
+  - Bias (Distance of Mean Vector from Origin): 0.000000
+  - Spread (Avg. distance of solutions from their mean): 0.000000
+------------------------------------------
+
+--- Other Statistics (For Context) ---
+| algorithm        |   avg_final_fitness |   std_final_fitness |   avg_fitness_calls |   std_fitness_calls | success_rate   |
+|:-----------------|--------------------:|--------------------:|--------------------:|--------------------:|:---------------|
+| ES (Best Config) |              0.8635 |              0.5665 |          32866.6667 |          12878.0308 | 23.33%         |
+| L-BFGS-B (Multi) |              0.0000 |              0.0000 |           8896.6667 |             34.2278 | 100.00%        |
+------------------------------------------
+
+
+--- Experiment 2: Statistical Analysis ---
+Running Mann-Whitney U test for each metric (alpha=0.05)
+This tests if the two groups (ES vs. L-BFGS-B) are from different distributions.
+
+--- Statistical Test for: Execution Time ---
+Mann-Whitney U Test: U-statistic = 690.0000, p-value = 0.0004
+p < 0.05: The difference between the algorithms is statistically significant.
+
+--- Statistical Test for: Final Fitness ---
+Mann-Whitney U Test: U-statistic = 900.0000, p-value = 0.0000
+p < 0.05: The difference between the algorithms is statistically significant.
+
+--- Statistical Test for: Final Solution Distance from Origin ---
+Mann-Whitney U Test: U-statistic = 900.0000, p-value = 0.0000
+p < 0.05: The difference between the algorithms is statistically significant.
+
+Generating and saving plots for Experiment 2...
